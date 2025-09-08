@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "AnhangueraAssigments"
+authors:
+  - family-names: Laserwolve
+    given-names: Andrew
+    orcid: ""
+    affiliation: "Anhanguera"
+date-released: "2025-09-08"
+version: "1.0"
+message: "If you use this repository, please cite it as below."
