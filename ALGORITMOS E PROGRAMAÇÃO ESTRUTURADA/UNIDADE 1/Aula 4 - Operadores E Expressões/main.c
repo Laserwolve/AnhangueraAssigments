@@ -1,6 +1,5 @@
 
 #include <stdio.h>
-#include <limits.h>
 
 int main() {
     int num1, num2, num3;
@@ -11,10 +10,6 @@ int main() {
         printf("Entrada invalida! Por favor, insira um numero inteiro.\n");
         return 1;
     }
-    if (num1 < INT_MIN || num1 > INT_MAX) {
-        printf("Numero fora do limite de int!\n");
-        return 1;
-    }
 
     printf("Digite o segundo numero inteiro: ");
     result = scanf("%d", &num2);
@@ -22,19 +17,11 @@ int main() {
         printf("Entrada invalida! Por favor, insira um numero inteiro.\n");
         return 1;
     }
-    if (num2 < INT_MIN || num2 > INT_MAX) {
-        printf("Numero fora do limite de int!\n");
-        return 1;
-    }
 
     printf("Digite o terceiro numero inteiro: ");
     result = scanf("%d", &num3);
     if (result != 1) {
         printf("Entrada invalida! Por favor, insira um numero inteiro.\n");
-        return 1;
-    }
-    if (num3 < INT_MIN || num3 > INT_MAX) {
-        printf("Numero fora do limite de int!\n");
         return 1;
     }
 
