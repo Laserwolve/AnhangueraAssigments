@@ -1,20 +1,57 @@
+
 #include <stdio.h>
+#include <limits.h>
 
 int main() {
     int num1, num2, num3;
-    printf("Digite tres numeros inteiros: ");
-    scanf("%d %d %d", &num1, &num2, &num3);
+    int result;
+    printf("Digite o primeiro numero inteiro: ");
+    result = scanf("%d", &num1);
+    if (result != 1) {
+        printf("Entrada invalida! Por favor, insira um numero inteiro.\n");
+        return 1;
+    }
+    if (num1 < INT_MIN || num1 > INT_MAX) {
+        printf("Numero fora do limite de int!\n");
+        return 1;
+    }
+
+    printf("Digite o segundo numero inteiro: ");
+    result = scanf("%d", &num2);
+    if (result != 1) {
+        printf("Entrada invalida! Por favor, insira um numero inteiro.\n");
+        return 1;
+    }
+    if (num2 < INT_MIN || num2 > INT_MAX) {
+        printf("Numero fora do limite de int!\n");
+        return 1;
+    }
+
+    printf("Digite o terceiro numero inteiro: ");
+    result = scanf("%d", &num3);
+    if (result != 1) {
+        printf("Entrada invalida! Por favor, insira um numero inteiro.\n");
+        return 1;
+    }
+    if (num3 < INT_MIN || num3 > INT_MAX) {
+        printf("Numero fora do limite de int!\n");
+        return 1;
+    }
 
     // Operacoes aritmeticas
     int soma = num1 + num2 + num3;
     int subtracao = num1 - num2 - num3;
     int multiplicacao = num1 * num2 * num3;
-    float divisao = (float)num1 / num2 / num3;
+    if (num2 == 0 || num3 == 0) {
+        printf("Divisao: ERRO (divisao por zero)\n");
+    } else {
+        float divisao = (float)num1 / num2 / num3;
+        printf("Divisao: %.2f\n", divisao);
+    }
 
     printf("Soma: %d\n", soma);
     printf("Subtracao: %d\n", subtracao);
     printf("Multiplicacao: %d\n", multiplicacao);
-    printf("Divisao: %.2f\n", divisao);
 
     // Operadores relacionais
     if (num1 > num2) {
