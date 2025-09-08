@@ -1,0 +1,1 @@
+When writing text in Brazilian Portuguese, don't use letters with accents or diacritics. For example, write "cafe" instead of "café".
