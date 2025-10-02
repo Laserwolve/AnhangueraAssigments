@@ -1,0 +1,50 @@
+# TABELAS VERDADE - APLICACOES DA LOGICA COMPUTACIONAL
+# 
+# 1. CONJUNCAO (AND - E)
+# P: Hoje e segunda-feira | Q: Esta chovendo
+P,Q,P AND Q
+0,0,0
+0,1,0
+1,0,0
+1,1,1
+
+# 2. DISJUNCAO (OR - OU)  
+# R: A luz esta acesa | S: A porta esta aberta
+R,S,R OR S
+0,0,0
+0,1,1
+1,0,1
+1,1,1
+
+# 3. NEGACAO
+# T: O ceu esta limpo
+T,NOT T
+0,1
+1,0
+
+# 4. LEIS DE DE MORGAN
+# U: O computador esta ligado | V: A internet esta conectada
+U,V,U AND V,NOT (U AND V),NOT U,NOT V,NOT U OR NOT V
+0,0,0,1,1,1,1
+0,1,0,1,1,0,1
+1,0,0,1,0,1,1
+1,1,1,0,0,0,0
+
+# 5. TAUTOLOGIA CONTRADICAO E CONTINGENCIA
+# W: (P OR NOT P) - Tautologia
+# X: (P AND NOT P) - Contradicao  
+# Y: (P OR Q) AND (NOT Q OR R) - Contingencia
+P,Q,R,NOT P,NOT Q,NOT R,P OR NOT P,P AND NOT P,P OR Q,NOT Q OR R,Y: (P OR Q) AND (NOT Q OR R)
+0,0,0,1,1,1,1,0,0,1,0
+0,0,1,1,1,0,1,0,0,1,0
+0,1,0,1,0,1,1,0,1,0,0
+0,1,1,1,0,0,1,0,1,1,1
+1,0,0,0,1,1,1,0,1,1,1
+1,0,1,0,1,0,1,0,1,1,1
+1,1,0,0,0,1,1,0,1,1,1
+1,1,1,0,0,0,1,0,1,1,1
+
+# ANALISE DOS RESULTADOS:
+# W (P OR NOT P): SEMPRE VERDADEIRO - TAUTOLOGIA
+# X (P AND NOT P): SEMPRE FALSO - CONTRADICAO
+# Y: VARIA CONFORME VALORES - CONTINGENCIA
